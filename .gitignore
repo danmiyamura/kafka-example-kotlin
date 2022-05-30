@@ -31,3 +31,4 @@ build/
 
 ### VS Code ###
 .vscode/
+/c:/temp/SpringBoot2App/application.log
