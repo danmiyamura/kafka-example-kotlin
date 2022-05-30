@@ -3,13 +3,10 @@ Simplify the use of Kafka for simple projects. This project can be used to make 
 Contains simple configs to Kafka Producer and Consumer.
 
 ## Technologies
-<img height="100" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/kotlin/kotlin-original-wordmark.svg" title="kotlin" width="100" alt="Kotlin"/>
-
-<img height="100" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/spring/spring-original-wordmark.svg" title="spring" width="100" alt="Spring"/>
-
-<img height="100" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/apachekafka/apachekafka-original-wordmark.svg" title="kafka" width="100" alt="Kafka"/>
-
-<img height="100" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/docker/docker-original-wordmark.svg" title="docker" width="100" alt="Docker"/>
+<img height="80" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/kotlin/kotlin-original-wordmark.svg" title="kotlin" width="80" alt="Kotlin"/>
+<img height="80" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/spring/spring-original-wordmark.svg" title="spring" width="80" alt="Spring"/>
+<img height="80" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/apachekafka/apachekafka-original-wordmark.svg" title="kafka" width="80" alt="Kafka"/>
+<img height="80" src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/docker/docker-original-wordmark.svg" title="docker" width="80" alt="Docker"/>
 
 ## Dependencies
 ***Docker version 20.10.14***
