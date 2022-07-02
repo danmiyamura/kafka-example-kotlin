@@ -23,6 +23,9 @@ Contains simple configs to Kafka Producer, Consumer and DLT topic.
 This projects uses Maven to build. To build, just run the command `docker-compose up`
 
 ## Testing
+
+[Postman collection](https://github.com/danmiyamura/kafka-example-kotlin/blob/master/Kafka%20Example.postman_collection.json)
+
 ```http
   POST /producer/customer
   
