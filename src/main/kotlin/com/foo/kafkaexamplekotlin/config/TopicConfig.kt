@@ -19,4 +19,10 @@ class TopicConfig {
         .name("customer-message")
         .partitions(8)
         .build()
+
+    @Bean
+    fun topicCustomerMessageDlt() = TopicBuilder
+        .name("customer-message.DLT")
+        .partitions(8)
+        .build()
 }

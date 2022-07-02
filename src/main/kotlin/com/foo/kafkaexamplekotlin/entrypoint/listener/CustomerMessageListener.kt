@@ -22,11 +22,21 @@ class CustomerMessageListener(
     )
     fun listenerTopicMessage(record: ConsumerRecord<String, String>, ack: Acknowledgment){
 
-        val data = Gson().fromJson(record.value(), Customer::class.java)
+        try {
+            val data = Gson().fromJson(record.value(), Customer::class.java)
 
-        log.info("{} - {} years old, says: {}", data.name, data.age, data.message)
+            //Caso receba o atributo "name" = "Exception" ele envia para o tópico de DLT através do DefaultErrorHandler
+            if(data.name.equals("Exception")){
+                throw Exception("Exception - send to customer-message.DLT")
+            }
 
-        //Faz o commit da mensagem e marca ela como lida
-        ack.acknowledge()
+            log.info("{} - {} - {} years old, says: {}", record.topic(), data.name, data.age, data.message)
+        } catch (ex: Exception){
+
+            throw Exception("Exception - send to customer-message.DLT")
+        } finally {
+            //Faz o commit da mensagem e marca ela como lida
+            ack.acknowledge()
+        }
     }
 }

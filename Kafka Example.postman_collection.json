@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "beb2a3da-8497-4bdd-955a-e8da98d6ac36",
+		"name": "Kafka Example",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "send customer message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\":\"Peter\",\r\n    \"age\":20,\r\n    \"message\":\"Test message\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/producer/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"producer",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send customer message exception to dlt topic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n    \"name\":\"Exception\",\r\n    \"age\":30,\r\n    \"message\":\"Test message\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/producer/customer",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"producer",
+						"customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reprocess message from dlt topic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/dlt/reprocess",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"dlt",
+						"reprocess"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

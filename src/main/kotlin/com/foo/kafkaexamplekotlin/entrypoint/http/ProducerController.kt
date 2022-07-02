@@ -4,6 +4,7 @@ import com.foo.kafkaexamplekotlin.domain.data.Customer
 import com.google.gson.Gson
 import org.apache.kafka.clients.producer.ProducerRecord
 import org.slf4j.Logger
+import org.springframework.beans.factory.annotation.Qualifier
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
@@ -15,6 +16,7 @@ private const val topic = "customer-message"
 @RestController
 @RequestMapping("/producer")
 class ProducerController(
+    @Qualifier("producerKafkaTemplate")
     private val kafkaTemplate: KafkaTemplate<String, String>,
     private val log: Logger
 ) {
